@@ -117,13 +117,13 @@
 <script type='text/javascript'>
     var curLocation = [0, 0];
     if (curLocation[0] == 0 && curLocation[1] == 0) {
-        curLocation = [3.299208, 98.932210];
+        curLocation = [-5.203078967453314, 104.96599903188961];
     }
 
     var L = window.L;
 
-    var mymap = L.map('mapid').setView([3.299208, 98.932210], 13);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    var mymap = L.map('mapid').setView([-5.203078967453314, 104.96599903188961], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
             '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
             'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',

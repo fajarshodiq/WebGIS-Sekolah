@@ -26,17 +26,12 @@
 <script src="<?= base_url('js/leaflet/leaflet.js'); ?>"></script>
 <script async='async' type='text/javascript'>
     var L = window.L;
-    var mymap = L.map('mapid').setView([3.299208, 98.932210], 14);
+    var mymap = L.map('mapid').setView([-5.199659877215283, 104.96840229100722], 12);
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        maxZoom: 18,
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1
-    }).addTo(mymap);
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(mymap);
 
     <?php foreach ($data as $i) { ?>
         L.marker([<?= $i['latitude']; ?>, <?= $i['longitude']; ?>]).bindPopup(

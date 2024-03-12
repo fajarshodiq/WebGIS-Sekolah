@@ -59,8 +59,8 @@
             //map view
             console.log("Lokasi Saat Ini :" + location.coords.latitude, location.coords.longitude);
             // var L = window.L;
-            var mymap = L.map('mapid').setView([3.299208, 98.932210], 14);
-            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            var mymap = L.map('mapid').setView([-5.214361833352767, 104.96222248184768], 14);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 18,
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
                     '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
